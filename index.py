@@ -24,6 +24,10 @@ class Cuadrado(Figura):
         area = self.lado * self.lado
         print("El área del cuadrado es:", area)
         return area
+    
+    def __del__(self):
+        print("El cuadrado  ha sido borrado.")
+        
   
 class Rectangulo(Figura):
     def __init__(self,  base, altura):
@@ -41,6 +45,9 @@ class Rectangulo(Figura):
         print("El área del rectángulo es:", area)
         return area
     
+    def __del__(self):
+        print("El rectángulo ha sido borrado.")
+    
 class Triangulo(Figura):
     def __init__(self, lado1, lado2, lado3,altura):
         super().__init__("_>Trinagulo<_")
@@ -57,6 +64,8 @@ class Triangulo(Figura):
         area = (self.lado1 * self.altura)/2
         print("El area del triangulo es: ",area)
         return area
+    def __del__(self):
+        print("El triangulo ha sido borrado. ")
     
     
 cuadrado= Cuadrado (5)
